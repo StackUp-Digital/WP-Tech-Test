@@ -22,11 +22,11 @@ When you're finished, you will need to raise a Pull Request against this reposit
 
 In this repository, you will find the contents of a theme. The screenshot below shows you how the homepage template should appear in the browser once all assets have been compiled:
 
-![Screenshot of the Homepage](https://github.comStackUp-Digital/WP-Tech-Test/blob/main/screenshot.png?raw=true)
+![Screenshot of the Homepage](https://github.com/StackUp-Digital/WP-Tech-Test/blob/main/screenshot.png?raw=true)
 
 **The Homepage Template**
 
-![Screenshot of the Page/Post Template](https://github.comStackUp-Digital/WP-Tech-Test/blob/main/screenshot_two.png?raw=true)
+![Screenshot of the Page/Post Template](https://github.com/StackUp-Digital/WP-Tech-Test/blob/main/screenshot_two.png?raw=true)
 
 **The Generic Page/Post Template**
 
