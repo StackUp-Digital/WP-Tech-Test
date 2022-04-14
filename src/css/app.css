@@ -1,0 +1,33 @@
+/**
+ * Require any npm packages here, e.g. toolkit
+ */
+
+/**
+ * Get base styles
+ */
+@import "./base/body.css";
+
+/**
+ * Get layout elements
+ * @import "./layout/my-file.css";
+ */
+
+/**
+ * Get components
+ * @import "./components/my-file.css";
+ */
+
+/**
+ * Trumps
+ * Basically, overrides (the nasty stuff).
+ * @import "./trumps/my-file.css";
+ */
+@import "./trumps/mobile-menu.css";
+
+/**
+ * Generate tailwind utility
+ * styles
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

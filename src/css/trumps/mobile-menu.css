@@ -1,0 +1,11 @@
+.mob-menu {
+  @apply duration-150 ease-out;
+}
+
+.mob-menu-closed {
+  @apply opacity-0 scale-95;
+}
+
+.mob-menu-open {
+  @apply opacity-100 scale-100;
+}

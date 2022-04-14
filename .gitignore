@@ -1,0 +1,9 @@
+# Misc
+.idea/
+.DS_Store
+
+# Package Managers
+node_modules/
+
+# Assets
+dist/
