@@ -12,11 +12,30 @@ You have been assigned three requirements, each have been prioritised as per the
 
 To pass the assessment, you are expected to complete the Must Have requirements. If you have some available time to complete the Should Have requirement then go for it 💪
 
-**👋 Hey, a quick heads up!** We estimate that will need no more than three hours to complete the assessment.
+**👋 Hey, a quick heads up!** We estimate that you will need no more than three hours to complete the assessment.
 
 ## Submitting Your Code
 
 When you're finished, you will need to raise a Pull Request against this repository. This will let us review your code locally whilst providing code feedback via Github. **Therefore, you must fork the repository, [you can do this by clicking here](https://github.com/StackUp-Digital/WP-Tech-Test/fork).**
+
+## Compiling Assets
+
+We have deliberately omitted the `dist/` folder from the repository. This folder will contain compiled CSS and JS. The theme uses Laravel Mix to compile assets and the views have been developed with TailwindCSS.
+
+To work with Laravel Mix, please do the following:
+
+1. Install the NPM dependencies with `npm` or `yarn`
+2. Once the dependencies are installed, use the `watch` script to watch for file changes like so:
+
+```
+# Using npm? Run the following
+npm run watch
+
+# Using yarn? Run the following
+yarn watch
+```
+
+Then you should be good to go 🎉
 
 ## The Requirements
 
