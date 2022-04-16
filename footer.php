@@ -1,3 +1,10 @@
+<?php
+$solutions_menu_items = wp_get_nav_menu_items(4) ?: null;
+$support_menu_items = wp_get_nav_menu_items(5) ?: null;
+$company_menu_items = wp_get_nav_menu_items(6) ?: null;
+$legal_menu_items = wp_get_nav_menu_items(7) ?: null;
+?>
+
 <footer class="bg-white" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -46,85 +53,53 @@
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
             <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
-            <ul role="list" class="mt-4 space-y-4">
+            <?php if ($solutions_menu_items) { ?>
+              <ul role="list" class="mt-4 space-y-4">
+              <?php foreach ($solutions_menu_items as $menu_item) { ?>
               <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Marketing </a>
+                <a href="<?php echo $menu_item->url; ?>" class="text-base text-gray-500 hover:text-gray-900"> <?php echo $menu_item->title; ?> </a>
               </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Analytics </a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Commerce </a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Insights </a>
-              </li>
-            </ul>
+              <?php } ?>
+              </ul>
+            <?php } ?>
           </div>
           <div class="mt-12 md:mt-0">
             <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
-            <ul role="list" class="mt-4 space-y-4">
+            <?php if ($support_menu_items) { ?>
+              <ul role="list" class="mt-4 space-y-4">
+              <?php foreach ($support_menu_items as $menu_item) { ?>
               <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Pricing </a>
+                <a href="<?php echo $menu_item->url; ?>" class="text-base text-gray-500 hover:text-gray-900"> <?php echo $menu_item->title; ?> </a>
               </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Documentation </a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Guides </a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> API Status </a>
-              </li>
-            </ul>
+              <?php } ?>
+              </ul>
+            <?php } ?>
           </div>
         </div>
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
             <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
-            <ul role="list" class="mt-4 space-y-4">
+            <?php if ($company_menu_items) { ?>
+              <ul role="list" class="mt-4 space-y-4">
+              <?php foreach ($company_menu_items as $menu_item) { ?>
               <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> About </a>
+                <a href="<?php echo $menu_item->url; ?>" class="text-base text-gray-500 hover:text-gray-900"> <?php echo $menu_item->title; ?> </a>
               </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Blog </a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Jobs </a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Press </a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Partners </a>
-              </li>
-            </ul>
+              <?php } ?>
+              </ul>
+            <?php } ?>
           </div>
           <div class="mt-12 md:mt-0">
             <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
-            <ul role="list" class="mt-4 space-y-4">
+            <?php if ($legal_menu_items) { ?>
+              <ul role="list" class="mt-4 space-y-4">
+              <?php foreach ($legal_menu_items as $menu_item) { ?>
               <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Claim </a>
+                <a href="<?php echo $menu_item->url; ?>" class="text-base text-gray-500 hover:text-gray-900"> <?php echo $menu_item->title; ?> </a>
               </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Privacy </a>
-              </li>
-
-              <li>
-                <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Terms </a>
-              </li>
-            </ul>
+              <?php } ?>
+              </ul>
+            <?php } ?>
           </div>
         </div>
       </div>

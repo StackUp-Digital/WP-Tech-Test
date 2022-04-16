@@ -7,6 +7,7 @@
 
   <?php wp_head(); ?>
 
+  <script src="<?php echo get_stylesheet_directory_uri() . '/dist/assets/js/app.js'; ?>" defer></script>
   <script src="<?php echo get_stylesheet_directory_uri() . '/dist/assets/js/turbo.js'; ?>" defer></script>
 </head>
 
@@ -24,7 +25,7 @@
                 <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="">
               </a>
               <div class="-mr-2 flex items-center md:hidden">
-                <button type="button" class="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" aria-expanded="false">
+                <button type="button" id="openMobileMenu" class="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white z-20 relative" aria-expanded="false">
                   <span class="sr-only">Open main menu</span>
                   <!-- Heroicon name: outline/menu -->
                   <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -34,10 +35,11 @@
               </div>
             </div>
             <div class="hidden space-x-8 md:flex md:ml-10">
-              <a href="#" class="text-base font-medium text-white hover:text-gray-300">Product</a>
-              <a href="#" class="text-base font-medium text-white hover:text-gray-300">Features</a>
-              <a href="#" class="text-base font-medium text-white hover:text-gray-300">Marketplace</a>
-              <a href="#" class="text-base font-medium text-white hover:text-gray-300">Company</a>
+              <?php
+              $navigation_menu_items = wp_get_nav_menu_items(3) ?: null;
+              foreach ($navigation_menu_items as $menu_item) { ?>
+                <a href="<?php echo $menu_item->url; ?>" class="text-base font-medium text-white hover:text-gray-300"><?php echo $menu_item->title; ?></a>
+              <?php } ?>
             </div>
           </div>
 
@@ -55,7 +57,7 @@
               <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
             </div>
             <div class="-mr-2">
-              <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+              <button type="button" id="closeMobileMenu" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
                 <span class="sr-only">Close menu</span>
                 <!-- Heroicon name: outline/x -->
                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
